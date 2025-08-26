@@ -1,6 +1,6 @@
 # Sentiment-Analysis
 
-# 📌 Sentiment Analysis using SVM and TF-IDF  
+# Sentiment Analysis using SVM and TF-IDF  
 
 ## 📖 Project Overview  
 This project classifies **customer reviews into Positive and Negative sentiments** using machine learning. Text data was preprocessed, converted into numerical vectors using **TF-IDF**, and modeled with **Support Vector Machines (SVM)**. The model achieved strong performance across multiple metrics.  
@@ -22,7 +22,7 @@ This project classifies **customer reviews into Positive and Negative sentiments
 
 ---
 
-## ⚙️ Methodology  
+## ⚙Methodology  
 
 ### 🔹 Data Preprocessing  
 - Cleaned and filtered dataset  
@@ -46,14 +46,14 @@ This project classifies **customer reviews into Positive and Negative sentiments
 
 ---
 
-## 📊 Results  
+## Results  
 - **Linear SVM** outperformed RBF Kernel  
 - TF-IDF effectively captured word importance  
 - Achieved strong classification results on unseen reviews  
 
 ---
 
-## 🚀 Key Learnings  
+## Key Learnings  
 - Importance of **data cleaning** in NLP tasks  
 - TF-IDF’s role in converting text into numerical features  
 - Effectiveness of **SVM** in high-dimensional spaces  
@@ -61,7 +61,7 @@ This project classifies **customer reviews into Positive and Negative sentiments
 
 ---
 
-## 🔮 Future Improvements  
+## Future Improvements  
 - Increase dataset size for better generalization  
 - Try other ML models (**Logistic Regression, Random Forest, XGBoost**)  
 - Explore **deep learning approaches (LSTM, BERT)**  
@@ -69,7 +69,7 @@ This project classifies **customer reviews into Positive and Negative sentiments
 
 ---
 
-## 🛠️ Tech Stack  
+## Tech Stack  
 - **Python**  
 - **Pandas, NumPy**  
 - **Scikit-learn**  
@@ -77,4 +77,4 @@ This project classifies **customer reviews into Positive and Negative sentiments
 
 ---
 
-✨ This project demonstrates how machine learning can analyze real-world text data to understand customer sentiment effectively.
+- This project demonstrates how machine learning can analyze real-world text data to understand customer sentiment effectively.
