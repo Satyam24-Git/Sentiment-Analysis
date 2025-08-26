@@ -1,104 +1,80 @@
 # Sentiment-Analysis
 
-Project Overview
+# 📌 Sentiment Analysis using SVM and TF-IDF  
 
-This project focuses on classifying customer reviews into Positive and Negative sentiments using machine learning techniques. Text data was preprocessed, converted into numerical vectors using TF-IDF, and modeled with Support Vector Machines (SVM). The model was evaluated using multiple metrics, achieving strong performance.
+## 📖 Project Overview  
+This project classifies **customer reviews into Positive and Negative sentiments** using machine learning. Text data was preprocessed, converted into numerical vectors using **TF-IDF**, and modeled with **Support Vector Machines (SVM)**. The model achieved strong performance across multiple metrics.  
 
-📂 Dataset
+---
 
-Size: 1,000+ customer reviews
+## 📂 Dataset  
+- **Size:** 1,000+ customer reviews  
+- **Columns:**  
+  - `Id` → unique identifier  
+  - `Text` → review content  
+  - `Sentiment` → Positive / Negative  
+  - `Platform` → review source  
+- **Preprocessing Steps:**  
+  - Removed irrelevant columns (`Unnamed: 0`, `Unnamed: 0.1`)  
+  - Renamed identifiers  
+  - Cleaned sentiment labels (removed whitespaces)  
+  - Filtered binary classes (Positive, Negative)  
 
-Columns:
+---
 
-Id → unique identifier
+## ⚙️ Methodology  
 
-Text → review content
+### 🔹 Data Preprocessing  
+- Cleaned and filtered dataset  
+- Stratified **train-test split (80/20)**  
 
-Sentiment → Positive or Negative label
+### 🔹 Feature Engineering  
+- Applied **TF-IDF Vectorizer** with `max_features=5000`  
+- Each review transformed into a **5,000-dimensional vector**  
 
-Platform → source of the review
+### 🔹 Modeling  
+- Trained **SVM Classifier** with:  
+  - Linear Kernel  
+  - RBF Kernel  
 
-Preprocessing:
+### 🔹 Evaluation Metrics  
+- **Accuracy:** ~88%  
+- **Precision:** 86%  
+- **Recall:** 87%  
+- **ROC-AUC:** 0.90  
+- Visualized with **Confusion Matrix & ROC Curve**  
 
-Removed unnecessary columns (Unnamed: 0, Unnamed: 0.1)
+---
 
-Renamed identifiers
+## 📊 Results  
+- **Linear SVM** outperformed RBF Kernel  
+- TF-IDF effectively captured word importance  
+- Achieved strong classification results on unseen reviews  
 
-Stripped whitespaces in labels
+---
 
-Filtered binary sentiments (Positive/Negative)
+## 🚀 Key Learnings  
+- Importance of **data cleaning** in NLP tasks  
+- TF-IDF’s role in converting text into numerical features  
+- Effectiveness of **SVM** in high-dimensional spaces  
+- Evaluating models with multiple metrics beyond accuracy  
 
-⚙️ Methodology
-1. Data Preprocessing
+---
 
-Handled irrelevant columns and reformatted column names
+## 🔮 Future Improvements  
+- Increase dataset size for better generalization  
+- Try other ML models (**Logistic Regression, Random Forest, XGBoost**)  
+- Explore **deep learning approaches (LSTM, BERT)**  
+- Extend to **multiclass sentiment analysis** (Neutral, Mixed)  
 
-Cleaned and filtered sentiment classes
+---
 
-Created train-test split (80/20 stratified)
+## 🛠️ Tech Stack  
+- **Python**  
+- **Pandas, NumPy**  
+- **Scikit-learn**  
+- **Matplotlib, Seaborn**  
 
-2. Feature Engineering
+---
 
-Used TF-IDF Vectorizer with max_features=5000 to represent text data numerically
-
-Each review was transformed into a 5,000-dimensional vector capturing word importance
-
-3. Modeling
-
-Implemented Support Vector Machine (SVM) with:
-
-Linear Kernel
-
-RBF Kernel
-
-Trained models on the transformed dataset
-
-4. Evaluation Metrics
-
-Accuracy: ~88%
-
-Precision: 86%
-
-Recall: 87%
-
-ROC-AUC: 0.90
-
-Confusion Matrix & ROC Curve plotted for visualization
-
-📊 Results
-
-Linear SVM performed better than RBF Kernel
-
-TF-IDF with top 5,000 features captured the most important words for sentiment classification
-
-The model achieved strong performance in predicting unseen reviews
-
-🚀 Key Learnings
-
-Importance of data cleaning in text-based datasets
-
-How TF-IDF effectively transforms unstructured text into numerical features
-
-SVM’s effectiveness in high-dimensional text classification problems
-
-Using multiple evaluation metrics (Accuracy, Precision, Recall, ROC-AUC) to judge model performance
-
-🔮 Future Improvements
-
-Expand dataset size to improve model generalization
-
-Experiment with advanced models such as Logistic Regression, Random Forest, or XGBoost
-
-Try deep learning approaches (LSTMs, BERT) for better performance
-
-Add support for multiclass sentiment classification (Neutral, Mixed)
-
-🛠️ Tech Stack
-
-Python
-
-Pandas, NumPy
-
-Scikit-learn
-
-Matplotlib, Seaborn
+✨ This project demonstrates how machine learning can analyze real-world text data to understand customer sentiment effectively.
